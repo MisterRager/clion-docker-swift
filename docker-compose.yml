@@ -1,0 +1,14 @@
+version: "2.0"
+services:
+  clion:
+    build: .
+    network_mode: host
+    volumes:
+      - "./workspace:/workspace"
+      - "./idea-config:/root/.CLion2018.2"
+      - "./java-config:/root/.java"
+      - "~/.Xauthority:/root/.Xauthority:rw"
+      - "/tmp/.X11-unix"
+    environment:
+      DISPLAY: "unix:0"
+    command: /opt/clion-2018.2.5/bin/clion.sh
