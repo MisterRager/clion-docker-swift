@@ -29,16 +29,6 @@ RUN find . \
     tar xvz -C /
 
 WORKDIR /opt
-RUN curl https://download-cf.jetbrains.com/cpp/CLion-2018.2.5.tar.gz | tar xz 
-
-RUN apt-get install -y pkg-config zip g++ zlib1g-dev unzip python
-
-RUN curl -L \
-   https://github.com/bazelbuild/bazel/releases/download/0.18.0/bazel-0.18.0-installer-darwin-x86_64.sh > \
-   /tmp/bazel-install.sh
-
-RUN chmod +x /tmp/bazel-install.sh
-RUN /tmp/bazel-install.sh --user
-RUN rm /tmp/bazel-install.sh
+RUN curl https://download-cf.jetbrains.com/cpp/CLion-2018.2.6.tar.gz | tar xz 
 
 RUN echo 'export PATH="$PATH:$HOME/bin"' >> ~/.bashrc
