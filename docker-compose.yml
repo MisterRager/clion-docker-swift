@@ -14,4 +14,4 @@ services:
     cap_add:
       - SYS_PTRACE
     privileged: true
-    command: /opt/clion-2018.2.5/bin/clion.sh
+    command: /opt/clion-2018.2.6/bin/clion.sh
